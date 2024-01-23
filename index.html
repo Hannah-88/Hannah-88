@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="index.css">
+        <script>
+            function redirectToLucky() {
+                var query = document.querySelector('input[name="q"]').value;
+                var luckyUrl = 'https://www.google.com/search?btnI=1&q=' + encodeURIComponent(query);
+                window.location.href = luckyUrl;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="links">
+            <a href="image.html">Google Image Search</a><br>
+            <a href="advanced.html">Google Advanced Search</a><br>
+        </div>
+        <div class="search_bar">
+            <div id="index">
+                <form action="https://www.google.com/search">
+                    <input type="text" name="q"><br>
+                    <input type="submit" value="Google Search">
+                    <a onclick="redirectToLucky()">I'm Feeling Lucky</a>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

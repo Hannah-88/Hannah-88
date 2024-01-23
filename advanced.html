@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+        <style>
+            body {
+                font-family: arial,sans-serif;
+            }
+            a {
+                position: absolute;
+                right: 0;
+            }
+            .search-container {
+                max-width: 400px;
+                margin: auto;
+                padding: 20px;
+                background-color: #f0f0f0;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            }
+
+            label {
+                display: inline-block;
+                width: 220px;
+                margin-bottom: 10px;
+            }
+
+            input {
+                width: calc(60% - 160px);
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+            }
+
+            input[type="submit"] {
+                background-color: #4285f4;
+                color: white;
+                cursor: pointer;
+                width: 123px;
+                display: block; 
+                margin: auto;
+                display: flex;
+                position: absolute;
+                top: 40%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+                
+            }
+            input[type="submit"]:hover,
+            form > a:hover {
+                 background-color: #3671d1; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="links">
+            <a href="index.html">Google Search</a><br>
+        </div>
+        <form action="https://www.google.com/search" method="GET">
+            <label for="all-words">Find pages with…</label><br>
+            <label for="all-words">all these words:</label>
+            <input type="text" id="all-words"  name="as_q" type="hidden" ><br><br>
+        
+            <label for="exact-phrase">this exact word or phrase:</label>
+            <input type="text" id="exact-phrase" name="as_epq" type="hidden" ><br><br>
+
+            <label for="any-words">any of these words:</label>
+            <input type="text" id="any-words" name="as_oq" type="hidden" ><br><br>
+
+            <label for="none-words">none of these words</label>
+            <input type="text" id="none-words" name="as_eq" type="hidden" ><br><br>
+
+            <div id="submit">
+                <input type="submit" value="Advanced Search">
+            </div>
+        </form>
+    </body>
+</html>
